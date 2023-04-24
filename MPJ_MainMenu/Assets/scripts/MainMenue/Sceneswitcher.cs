@@ -52,8 +52,12 @@ public class Sceneswitcher : MonoBehaviour
         Debug.Log("Rucket Run load");
     }
 
-        public void MciJumpEntry()
+    public void MciJumpEntry()
     {
         SceneManager.LoadScene(MciJump);
+    }
+    public void restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

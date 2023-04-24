@@ -14,8 +14,11 @@ public class CameraFollow : MonoBehaviour
 
     private void Update()
     {
-        Vector3 newPosition = objectToFollow.transform.position + cameraOffset;
-        newPosition.x = transform.position.x;
-        transform.position = newPosition;
+        if (objectToFollow.transform.position.y > transform.position.y)
+        {
+            Vector3 newPosition = objectToFollow.transform.position + cameraOffset;
+            newPosition.x = transform.position.x;
+            transform.position = newPosition;
+        }
     }
 }
